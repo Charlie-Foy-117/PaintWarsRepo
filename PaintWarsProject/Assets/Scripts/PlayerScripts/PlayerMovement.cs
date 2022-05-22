@@ -6,12 +6,14 @@ public class PlayerMovement : MonoBehaviour
 {
     //public variable, visible in unity inspector
     public float moveSpeed = 3.0f;
+    private Animator animate;
 
     private Rigidbody2D physicsBody = null;
     // Start is called before the first frame update
     void Start()
     {
         physicsBody = GetComponent<Rigidbody2D>();
+        animate = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,12 +23,16 @@ public class PlayerMovement : MonoBehaviour
         float axisValX = Input.GetAxis("Horizontal");
         float axisValY = Input.GetAxis("Vertical");
 
+        //allows idle animation to change into run animation when moving
+        animate.SetFloat("run", Mathf.Abs(axisValX));
+
         //use axes value to set up a new velocity vector
         Vector2 newVel = new Vector2(axisValX, axisValY);
 
         //scale our velocity based on speed
         //goes from -speed to +speed
         newVel = newVel * moveSpeed;
+
     }
 
     public void MoveLeft()
