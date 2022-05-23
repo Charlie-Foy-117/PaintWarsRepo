@@ -16,7 +16,7 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         //sets the target location for camera to move to
-        cameraPosition = new Vector3(player.position.x, 0, -10f);
+        cameraPosition = new Vector3(player.position.x, player.position.y, -10f);
         //moves the camera if its not at the players location
         transform.position = Vector3.SmoothDamp(gameObject.transform.position, cameraPosition, ref velocity, delayTime);
     }
