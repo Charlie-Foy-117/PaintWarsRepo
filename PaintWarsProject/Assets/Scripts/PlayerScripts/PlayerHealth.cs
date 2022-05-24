@@ -7,6 +7,9 @@ public class PlayerHealth : MonoBehaviour
     public int startingHealth = 3;
     private int currentHealth = 3;
 
+    //calls Healthbarslider script
+    public HealthBarSlider healthBar;
+
     public float hitInvincibilityMaxTime = 1;
     private float lastHitTime = 0;
 
@@ -14,6 +17,9 @@ public class PlayerHealth : MonoBehaviour
     {
         //initalising our current health to be equal to our starting health when the player spawns
         currentHealth = startingHealth;
+
+        //sets healthbar slider value to starting health
+        healthBar.SetMaxHealth(startingHealth);
     }
     //kill the player (for now delete gameobject)
     public void Kill()
@@ -30,6 +36,9 @@ public class PlayerHealth : MonoBehaviour
         {
             //deal the damage
             currentHealth += changeAmount;
+
+            //updates health bar value to equal currnet health value
+            healthBar.SetHealth(currentHealth);
 
             //clamp health between 0 and starting health
             //to avoid negative health
