@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     //public variable, visible in unity inspector
     public float moveSpeed = 3.0f;
     private Animator animate;
-
+    private bool facingRight = true;
     private Rigidbody2D physicsBody = null;
     // Start is called before the first frame update
     void Start()
@@ -45,6 +45,11 @@ public class PlayerMovement : MonoBehaviour
 
         //allows idle animation to change into run animation when moving
         animate.SetFloat("run", 1);
+        //changes way player is facing when called
+        if (facingRight)
+        {
+            Flip();
+        }
     }
 
     public void MoveRight()
@@ -57,6 +62,20 @@ public class PlayerMovement : MonoBehaviour
 
         //allows idle animation to change into run animation when moving
         animate.SetFloat("run", 1);
+        //changes way player is facing when called
+        if (!facingRight)
+        {
+            Flip();
+        }
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+
+        Vector2 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
     }
 
 }

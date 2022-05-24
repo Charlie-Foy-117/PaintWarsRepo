@@ -983,6 +983,7 @@ GameObject:
   - component: {fileID: 329076080}
   - component: {fileID: 329076079}
   - component: {fileID: 329076078}
+  - component: {fileID: 329076085}
   m_Layer: 0
   m_Name: cf_mainchar-PBgun_asset_1 1
   m_TagString: Untagged
@@ -1130,7 +1131,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &329076080
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1221,6 +1222,20 @@ MonoBehaviour:
     showGizmo: 1
   - color: {r: 0, g: 1, b: 0, a: 1}
     showGizmo: 1
+--- !u!114 &329076085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329076074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad79a40c4f6e3f6458206a558abc493b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 2705493817285060268, guid: 99eb5cd5063455c4bb464eeaa3e50afd, type: 3}
+  projectileVelocity: {x: 10, y: 0}
 --- !u!1 &331709272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3561,7 +3576,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 933444315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 329076085}
+        m_TargetAssemblyTypeName: PlayerFire, Assembly-CSharp
+        m_MethodName: FireProjectile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &933444315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5514,9 +5541,11 @@ GameObject:
   - component: {fileID: 1478402635}
   - component: {fileID: 1478402641}
   - component: {fileID: 1478402640}
+  - component: {fileID: 1478402643}
+  - component: {fileID: 1478402642}
   m_Layer: 0
   m_Name: cf_enemychar_asset_1 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5711,6 +5740,44 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.715389, y: 15.999327}
   m_EdgeRadius: 0
+--- !u!114 &1478402642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478402634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1340655223bce3b42ba612efae395e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceStrength: 1
+  stopDistance: 0.2
+  patrolPoints:
+  - {x: 24.23, y: -2.521}
+  - {x: 16.18, y: -2.521}
+--- !u!50 &1478402643
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478402634}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1539070176
 GameObject:
   m_ObjectHideFlags: 0
