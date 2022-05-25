@@ -6007,8 +6007,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1340655223bce3b42ba612efae395e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceStrength: 1
-  stopDistance: 0.2
+  forceStrength: 2
+  stopDistance: 1
   patrolPoints:
   - {x: 24.23, y: -2.521}
   - {x: 16.18, y: -2.521}
