@@ -25,7 +25,8 @@ public class PlayerFire : MonoBehaviour
         Rigidbody2D projectileRigidbody;
         //get the rigidbody from our projectile and store it
         projectileRigidbody = clonedProjectile.GetComponent<Rigidbody2D>();
-        //set the velcotiy on the rigidbody to the editor setting
+        
+        //set the velocity on the rigidbody to the editor setting
         projectileRigidbody.velocity = projectileVelocity;
     }
 

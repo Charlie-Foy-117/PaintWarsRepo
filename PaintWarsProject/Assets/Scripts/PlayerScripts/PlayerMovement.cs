@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         physicsBody.velocity = newVel;
 
         //allows idle animation to change into run animation when moving
-        animate.SetFloat("run", 1);
+        animate.SetFloat("run", -1);
         //changes way player is facing when called
         if (facingRight)
         {
