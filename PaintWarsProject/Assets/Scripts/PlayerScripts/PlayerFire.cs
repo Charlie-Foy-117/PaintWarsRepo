@@ -7,10 +7,12 @@ public class PlayerFire : MonoBehaviour
     //unity editor variables
     public GameObject projectilePrefab;
     public Vector2 projectileVelocity;
+    private Vector3 offset;
 
     //action: fire a projectile
     public void FireProjectile()
     {
+        offset = new Vector3(transform.position.x + 2, (float)(transform.position.y + 0.45), transform.position.z);
         //clone the projectile 
         //delcare a variable to hold the cloned object
         GameObject clonedProjectile;
@@ -18,7 +20,7 @@ public class PlayerFire : MonoBehaviour
         clonedProjectile = Instantiate(projectilePrefab);
 
         //position the projectile on the player
-        clonedProjectile.transform.position = transform.position; //optional: add an offset (use a public variable)
+        clonedProjectile.transform.position = offset; //optional: add an offset (use a public variable)
 
         //fire it in a direction
         //declare a variable to hold the cloned object's rigidbody
