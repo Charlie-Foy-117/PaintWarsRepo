@@ -6,6 +6,7 @@ public class PlayerJump : MonoBehaviour
 {
     //public variable, visible in unity inspector
     public float jumpSpeed = 3.0f;
+    public bool inAir = true;
 
     private Rigidbody2D physicsBody = null;
 
@@ -32,10 +33,20 @@ public class PlayerJump : MonoBehaviour
 
     public void MoveUp()
     {
-        Debug.Log("Jump button pressed");
+        if (!inAir)
+        {
+            Debug.Log("Jump button pressed");
 
-        Vector2 newVel = new Vector2(0, jumpSpeed);
+            Vector2 newVel = new Vector2(0, jumpSpeed);
 
-        physicsBody.velocity = newVel;
+            physicsBody.velocity = newVel;
+
+            inAir = true;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        inAir = false;
     }
 }
