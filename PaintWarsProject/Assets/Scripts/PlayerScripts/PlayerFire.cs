@@ -8,6 +8,7 @@ public class PlayerFire : MonoBehaviour
     public GameObject projectilePrefab;
     public Vector2 projectileVelocity;
     private Vector3 offset;
+    private int direction;
 
     //action: fire a projectile
     public void FireProjectile()
@@ -18,7 +19,14 @@ public class PlayerFire : MonoBehaviour
         GameObject clonedProjectile;
         //use instantiate to clone the projectile and keep the result in our variable
         clonedProjectile = Instantiate(projectilePrefab);
-
+        if (transform.localScale.x > 0)
+        {
+            offset = new Vector3(transform.position.x + 2, (float)(transform.position.y + 0.45), transform.position.z);
+        }
+        if (transform.localScale.x < 0)
+        {
+            offset = new Vector3(transform.position.x - 2, (float)(transform.position.y + 0.45), transform.position.z);
+        }
         //position the projectile on the player
         clonedProjectile.transform.position = offset; //optional: add an offset (use a public variable)
 
@@ -28,8 +36,16 @@ public class PlayerFire : MonoBehaviour
         //get the rigidbody from our projectile and store it
         projectileRigidbody = clonedProjectile.GetComponent<Rigidbody2D>();
         
+        if (transform.localScale.x > 0)
+        {
+            direction = 1;
+        }
+        if (transform.localScale.x < 0)
+        {
+            direction = -1;
+        }
         //set the velocity on the rigidbody to the editor setting
-        projectileRigidbody.velocity = projectileVelocity;
+        projectileRigidbody.velocity = projectileVelocity * direction;
     }
 
 }

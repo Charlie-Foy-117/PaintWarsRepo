@@ -12,6 +12,7 @@ public class PlayerDamage : MonoBehaviour
         {
             //perform our action
             KillEnemy(otherCollider.gameObject);
+            Destroy(gameObject);
         }
     }
 
