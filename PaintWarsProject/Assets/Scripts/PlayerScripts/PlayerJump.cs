@@ -43,10 +43,14 @@ public class PlayerJump : MonoBehaviour
 
             inAir = true;
         }
+        
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        inAir = false;
+        if (collision.collider)
+        {
+            inAir = false;
+        }
     }
 }
