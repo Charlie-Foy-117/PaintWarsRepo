@@ -27,5 +27,7 @@ public class Lever : MonoBehaviour
 
         //set the isOn to true when triggered
         isOn = true;
+
+        Destroy(gameObject.GetComponent<BoxCollider2D>());
     }
 }

@@ -485,6 +485,7 @@ GameObject:
   - component: {fileID: 6136484327905018823}
   - component: {fileID: 7733149524965376715}
   - component: {fileID: 6136484327905018844}
+  - component: {fileID: 1512751797}
   m_Layer: 0
   m_Name: cf_mainchar-PBgun_asset_1 1
   m_TagString: Untagged
@@ -550,7 +551,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1629903691
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c3e9dec131840b144b33f37fb1659e90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -752,6 +753,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2705493817285060268, guid: 99eb5cd5063455c4bb464eeaa3e50afd, type: 3}
   projectileVelocity: {x: 10, y: 0}
+--- !u!114 &1512751797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136484327905018819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753c37585c0a47a4b8f83dc40d2cce90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 9181441054585677489, guid: 1b337e207af5d4841bcfe79d5db0e4ef, type: 3}
+  projectileVelocity: {x: 6, y: 0.5}
 --- !u!1 &6136484327916461713
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,10 +22,16 @@ public class GameManager : MonoBehaviour
             if(levers[i].GetComponent<Lever>().isOn == true)
             {
                 noOfLeversFlipped++;
+                levers[i].GetComponent<Lever>().isOn = false;
             }
         }
 
         return noOfLeversFlipped;
+    }
+
+    private void Update()
+    {
+        GetNoOfLevers();
     }
 
 }
