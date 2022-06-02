@@ -9,10 +9,14 @@ public class PlayerBombThrow : MonoBehaviour
     public Vector2 projectileVelocity;
     private Vector3 offset;
     private int direction;
+    private Vector3 rotation;
+    private Animator animate;
 
     public void ThrowProjectile()
     {
-        offset = new Vector3(transform.position.x + 2, (float)(transform.position.y + 0.45), transform.position.z);
+        //sets float to true to run bomb throw animation
+        //animate.SetFloat("throw", 1);
+
         //clone the projectile 
         //delcare a variable to hold the cloned object
         GameObject clonedProjectile;
@@ -27,7 +31,7 @@ public class PlayerBombThrow : MonoBehaviour
             offset = new Vector3((float)(transform.position.x - 1.5), (float)(transform.position.y + 1.5), transform.position.z);
         }
         //position the projectile on the player
-        clonedProjectile.transform.position = offset; //optional: add an offset (use a public variable)
+        clonedProjectile.transform.position = offset;
 
         //fire it in a direction
         //declare a variable to hold the cloned object's rigidbody
@@ -46,4 +50,10 @@ public class PlayerBombThrow : MonoBehaviour
         //set the velocity on the rigidbody to the editor setting
         projectileRigidbody.velocity = projectileVelocity * direction;
     }
+
+    /*void Update()
+    {
+        //sets boolean to false to run bomb throw animation
+        animate.SetBool("throw", false);
+    }*/
 }
