@@ -1,41 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
 
 public class Lever : MonoBehaviour
 {
-    public bool leverOn = true;
-    private bool buttonPressed = false;
+    [SerializeField]
+    GameObject leverOn;
+
+    [SerializeField]
+    GameObject leverOff;
+
+    public bool isOn = false;
+
+    private void Start()
+    {
+        //set the lever to off sprite
+        gameObject.GetComponent<SpriteRenderer>().sprite = leverOff.GetComponent<SpriteRenderer>().sprite;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
-            if (buttonPressed == true && leverOn == true)
-            {
-                LeverOff();
-            }
-            if (buttonPressed == true && leverOn == false)
-            {
-                LeverOn();
-            }
-        }
-    }
+        //set the lever to on sprite
+        gameObject.GetComponent<SpriteRenderer>().sprite = leverOn.GetComponent<SpriteRenderer>().sprite;
 
-    private void LeverOn()
-    {
-        leverOn = true;
-    }
-
-    private void LeverOff()
-    {
-        leverOn = false;
-    }
-
-    private void OnMouseDown()
-    {
-        buttonPressed = true;
+        //set the isOn to true when triggered
+        isOn = true;
     }
 }
