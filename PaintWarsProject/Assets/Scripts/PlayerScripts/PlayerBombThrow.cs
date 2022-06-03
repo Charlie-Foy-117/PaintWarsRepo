@@ -54,9 +54,9 @@ public class PlayerBombThrow : MonoBehaviour
         projectileRigidbody.velocity = projectileVelocity * direction;
     }
 
-    void Update()
+    /*void Update()
     {
         //sets float to 0 to run bomb throw animation
         animate.SetFloat("throw", 0);
-    }
+    }*/
 }

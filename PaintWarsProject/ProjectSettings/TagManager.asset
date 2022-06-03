@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Stonedoor
+  - Woodendoor
   layers:
   - Default
   - TransparentFX
@@ -54,4 +55,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 2665063605
+    locked: 0
+  - name: Override
+    uniqueID: 5816261
     locked: 0

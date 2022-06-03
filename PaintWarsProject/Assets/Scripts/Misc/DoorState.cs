@@ -21,12 +21,22 @@ public class DoorState : MonoBehaviour
         {
             ClosedDoor();
         }
+
+        if (DoorType.tag == "Woodendoor")
+        {
+            ClosedDoor();
+        }
     }
 
     //fuction to close door and set its state
     void ClosedDoor()
     {
         if (DoorType.tag == "Stonedoor")
+        {
+            animate.SetFloat("DoorState", 1);
+            stateOfDoor = 1;
+        }
+        if (DoorType.tag == "Woodendoor")
         {
             animate.SetFloat("DoorState", 1);
             stateOfDoor = 1;
@@ -42,6 +52,12 @@ public class DoorState : MonoBehaviour
             stateOfDoor = 2;
             Destroy(gameObject.GetComponent<EdgeCollider2D>());
         }
+        if (DoorType.tag == "Woodendoor")
+        {
+            animate.SetFloat("DoorState", 2);
+            stateOfDoor = 2;
+            Destroy(gameObject.GetComponent<EdgeCollider2D>());
+        }
     }
 
     //fuction to set the state of the door
@@ -52,6 +68,15 @@ public class DoorState : MonoBehaviour
             ClosedDoor();
         }
         if (state == 2 && DoorType.tag == "StoneDoor")
+        {
+            OpenDoor();
+        }
+
+        if (state == 1 && DoorType.tag == "Woodendoor")
+        {
+            ClosedDoor();
+        }
+        if (state == 2 && DoorType.tag == "Woodendoor")
         {
             OpenDoor();
         }
