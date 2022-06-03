@@ -4,29 +4,62 @@ using UnityEngine;
 
 public class DoorState : MonoBehaviour
 {
-    public int leversNeeded = 2;
-    
-    [SerializeField]
-    GameObject doorUnlocked;
+    Animator animate;
 
     [SerializeField]
-    GameObject doorLocked;
+    GameObject DoorType;
+
+    int stateOfDoor = 1;
 
     private void Start()
     {
-        //set the lever to off sprite
-        gameObject.GetComponent<SpriteRenderer>().sprite = doorLocked.GetComponent<SpriteRenderer>().sprite;
-    }
-    public void GetDoorState()
-    {
-        if (leversNeeded == gameObject.GetComponent<GameManager>().noOfLeversFlipped)
+        //initialise the animator
+        animate = GetComponent<Animator>();
+
+        //set doors to closed
+        if (DoorType.tag == "Stonedoor")
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = doorUnlocked.GetComponent<SpriteRenderer>().sprite;
+            ClosedDoor();
         }
     }
 
-   /* void Update()
+    //fuction to close door and set its state
+    void ClosedDoor()
     {
-        GetDoorState();
-    } */
+        if (DoorType.tag == "Stonedoor")
+        {
+            animate.SetFloat("DoorState", 1);
+            stateOfDoor = 1;
+        }
+    }
+
+    //fuction to open door and set its state
+    public void OpenDoor()
+    {
+        if (DoorType.tag == "Stonedoor")
+        {
+            animate.SetFloat("DoorState", 2);
+            stateOfDoor = 2;
+            Destroy(gameObject.GetComponent<EdgeCollider2D>());
+        }
+    }
+
+    //fuction to set the state of the door
+    public void SetDoorState(int state)
+    {
+        if (state == 1 && DoorType.tag == "StoneDoor")
+        {
+            ClosedDoor();
+        }
+        if (state == 2 && DoorType.tag == "StoneDoor")
+        {
+            OpenDoor();
+        }
+    }
+    
+    //fuction to get the current door state
+    public int GetDoorState()
+    {
+        return stateOfDoor;
+    }
 }

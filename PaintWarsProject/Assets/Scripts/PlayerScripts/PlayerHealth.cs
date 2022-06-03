@@ -37,9 +37,6 @@ public class PlayerHealth : MonoBehaviour
             //deal the damage
             currentHealth += changeAmount;
 
-            //updates health bar value to equal currnet health value
-            healthBar.SetHealth(currentHealth);
-
             //clamp health between 0 and starting health
             //to avoid negative health
             //and going above max health
@@ -55,5 +52,19 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void HealPlayer()
+    {
+
+        if(currentHealth < 3)
+        {
+            currentHealth++;
+        }
+        
+    }
+    private void Update()
+    {
+        //updates health bar value to equal currnet health value
+        healthBar.SetHealth(currentHealth);
+    }
 
 }

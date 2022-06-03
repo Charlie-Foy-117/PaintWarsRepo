@@ -9,13 +9,16 @@ public class PlayerBombThrow : MonoBehaviour
     public Vector2 projectileVelocity;
     private Vector3 offset;
     private int direction;
-    private Vector3 rotation;
     private Animator animate;
 
+    private void Awake()
+    {
+        animate = GetComponent<Animator>();
+    }
     public void ThrowProjectile()
     {
         //sets float to true to run bomb throw animation
-        //animate.SetFloat("throw", 1);
+        animate.SetFloat("throw", 1);
 
         //clone the projectile 
         //delcare a variable to hold the cloned object
@@ -51,9 +54,9 @@ public class PlayerBombThrow : MonoBehaviour
         projectileRigidbody.velocity = projectileVelocity * direction;
     }
 
-    /*void Update()
+    void Update()
     {
-        //sets boolean to false to run bomb throw animation
-        animate.SetBool("throw", false);
-    }*/
+        //sets float to 0 to run bomb throw animation
+        animate.SetFloat("throw", 0);
+    }
 }

@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject[] levers;
 
+    [SerializeField]
+    GameObject door;
+
     public int noOfLeversFlipped = 0;
 
     void Start()
@@ -29,9 +32,17 @@ public class GameManager : MonoBehaviour
         return noOfLeversFlipped;
     }
 
+    public void GetDoorState()
+    {
+        if (noOfLeversFlipped == 2)
+        {
+            door.GetComponent<DoorState>().OpenDoor();
+        }
+    }
     private void Update()
     {
         GetNoOfLevers();
+        GetDoorState();
     }
 
 }
