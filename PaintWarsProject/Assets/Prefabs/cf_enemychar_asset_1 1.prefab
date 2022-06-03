@@ -826,6 +826,7 @@ GameObject:
   - component: {fileID: 8908691280141369558}
   - component: {fileID: 8908691280141369557}
   - component: {fileID: 8908691280141369556}
+  - component: {fileID: -3090690664607866230}
   m_Layer: 0
   m_Name: cf_enemychar_asset_1 1
   m_TagString: Enemy
@@ -1061,3 +1062,17 @@ MonoBehaviour:
   patrolPoints:
   - {x: 24.23, y: -2.521}
   - {x: 16.18, y: -2.521}
+--- !u!114 &-3090690664607866230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8908691280141369548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70529fbe4a95ef0439b1f9737cec28e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 1
+  hitInvincibilityMaxTime: 1

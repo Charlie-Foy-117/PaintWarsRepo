@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -3234588758231244046}
   - component: {fileID: 1704717990191924698}
   - component: {fileID: 4465051370896533965}
+  - component: {fileID: 2628681293585901758}
   m_Layer: 0
   m_Name: cf_bomb_asset_1
   m_TagString: Untagged
@@ -159,3 +160,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: -1
+--- !u!114 &2628681293585901758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9181441054585677489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188e6df345dd9ca4d8714a59059ff0aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDamage: -3

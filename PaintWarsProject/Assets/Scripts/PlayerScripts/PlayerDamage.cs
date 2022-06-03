@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class PlayerDamage : MonoBehaviour
 {
-    //condition: when the projectile hits a certain object type (enemy)
-    void OnTriggerEnter2D(Collider2D otherCollider)
+    [Header("Negative number for damage the hazard should deal")]
+    //how much damage this hazard will deal
+    public int playerDamage = 3;
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        //check if the object we collided with has the tag we are looking for
-        if (otherCollider.CompareTag("Enemy"))
+        //get the health componenet from the object
+        EnemyHealth healthScript = collision.gameObject.GetComponent<EnemyHealth>();
+
+        if (healthScript) //the thing we collided with has a health script
         {
-            //perform our action
-            KillEnemy(otherCollider.gameObject);
-            Destroy(gameObject);
+            //we hit the player
+            healthScript.ChangeHealth(playerDamage);
         }
     }
-
-    //action: Destory object
-    public void KillEnemy(GameObject enemy)
+    // Start is called before the first frame update
+    void Start()
     {
-        Destroy(enemy);
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 }
