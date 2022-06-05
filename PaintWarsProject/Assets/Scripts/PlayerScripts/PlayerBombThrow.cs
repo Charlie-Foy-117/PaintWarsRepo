@@ -18,7 +18,7 @@ public class PlayerBombThrow : MonoBehaviour
     public void ThrowProjectile()
     {
         //sets float to true to run bomb throw animation
-        animate.SetFloat("throw", 1);
+       // animate.SetFloat("throw", 1);
 
         //clone the projectile 
         //delcare a variable to hold the cloned object

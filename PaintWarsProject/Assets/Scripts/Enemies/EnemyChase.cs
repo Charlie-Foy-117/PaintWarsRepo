@@ -23,7 +23,14 @@ public class EnemyChase : MonoBehaviour
         // Get the direction
         // Subtract the current position from the target position to get a distance vector
         // Normalise changes it to be length 1, so we can then multiply it by our speed / force
-        direction = new Vector2(target.position.x - transform.position.x, transform.position.y);
+        if (transform.position.x > target.position.x)
+        {
+            direction = new Vector2(target.position.x - transform.position.x - 5, transform.position.y);
+        }
+        if (transform.position.x < target.position.x)
+        {
+            direction = new Vector2(target.position.x - transform.position.x + 5, transform.position.y);
+        }
 
         // Move in the correct direction with the set force strength
         ourRigidbody.AddForce(direction * forceStrength);
