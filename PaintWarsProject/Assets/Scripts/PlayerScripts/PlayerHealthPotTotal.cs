@@ -10,13 +10,15 @@ public class PlayerHealthPotTotal : MonoBehaviour
 
     public void AddHealthPotValue(int toAdd)
     {
+        //updates the total number of health pots
         healthPotValue += toAdd;
-
+        //displays current health pot total
         healthPotDisplay.text = healthPotValue.ToString();
     }
     // Start is called before the first frame update
     void Start()
     {
+        //displays current health pot total
         healthPotDisplay.text = healthPotValue.ToString();
     }
 
