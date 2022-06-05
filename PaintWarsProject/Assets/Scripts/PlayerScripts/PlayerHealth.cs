@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
 
     //calls Healthbarslider script
     public HealthBarSlider healthBar;
+    PlayerHealthPotTotal totalHealthPots;
+    private int usedHealthPot = -1;
 
     public float hitInvincibilityMaxTime = 1;
     private float lastHitTime = 0;
@@ -54,10 +56,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealPlayer()
     {
-
-        if(currentHealth < 3)
+        if(currentHealth < 3 && PlayerHealthPotTotal.healthPotValue >= 1)
         {
             currentHealth++;
+            totalHealthPots.AddHealthPotValue(usedHealthPot);
         }
         
     }

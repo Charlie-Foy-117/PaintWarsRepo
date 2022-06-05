@@ -21,6 +21,7 @@ public class PlayGame : MonoBehaviour
 
     public void LoadGame()
     {
+        //loads first level
         SceneManager.LoadScene("Level 1");
     }
 }

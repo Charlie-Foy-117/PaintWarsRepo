@@ -19,7 +19,7 @@ public class ReturnToMenu : MonoBehaviour
     }
 
     public void LoadMenu()
-    {
+    {//loads menu
         SceneManager.LoadScene("Menu");
     }
 }

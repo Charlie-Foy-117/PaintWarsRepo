@@ -1076,3 +1076,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 1
   hitInvincibilityMaxTime: 1
+  healthPotDrop: {fileID: 6174042235573787589, guid: 4e004873951ca0a46b8fcd9a35bd669a, type: 3}
