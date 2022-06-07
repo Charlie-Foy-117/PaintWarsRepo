@@ -14,8 +14,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject Woodendoor;
 
-    public int reqLevers = 0;
-
     public int noOfLeversFlipped = 0;
 
     void Start()
