@@ -849,6 +849,7 @@ MonoBehaviour:
   - {fileID: 63972064}
   Stonedoor: {fileID: 573714503}
   Woodendoor: {fileID: 1067300844}
+  reqLevers: 0
   noOfLeversFlipped: 0
 --- !u!4 &119399108
 Transform:
@@ -2671,6 +2672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoorType: {fileID: 573714503}
+  reqLevers: 2
 --- !u!68 &573714505
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -6179,6 +6181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoorType: {fileID: 1067300844}
+  reqLevers: 4
 --- !u!1 &1072643380
 GameObject:
   m_ObjectHideFlags: 0

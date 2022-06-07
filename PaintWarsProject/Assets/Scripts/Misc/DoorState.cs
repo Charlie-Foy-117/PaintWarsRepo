@@ -10,6 +10,7 @@ public class DoorState : MonoBehaviour
     GameObject DoorType;
 
     int stateOfDoor = 1;
+    public int reqLevers = 0;
 
     private void Start()
     {
@@ -46,6 +47,8 @@ public class DoorState : MonoBehaviour
     //fuction to open door and set its state
     public void OpenDoor()
     {
+        reqLevers = 0;
+
         if (DoorType.tag == "Stonedoor")
         {
             animate.SetFloat("DoorState", 2);

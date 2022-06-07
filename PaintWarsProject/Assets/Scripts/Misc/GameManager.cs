@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject Woodendoor;
 
+    public int reqLevers = 0;
+
     public int noOfLeversFlipped = 0;
 
     void Start()
@@ -37,11 +39,11 @@ public class GameManager : MonoBehaviour
 
     public void GetDoorState()
     {
-        if (noOfLeversFlipped >= 2)
+        if (Stonedoor && noOfLeversFlipped >= Stonedoor.GetComponent<DoorState>().reqLevers)
         {
             Stonedoor.GetComponent<DoorState>().OpenDoor();
         }
-        if (noOfLeversFlipped >= 4)
+        if (Woodendoor && noOfLeversFlipped >= Woodendoor.GetComponent<DoorState>().reqLevers)
         {
             Woodendoor.GetComponent<DoorState>().OpenDoor();
         }
