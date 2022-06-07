@@ -3948,7 +3948,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1512751797}
         m_TargetAssemblyTypeName: PlayerBombThrow, Assembly-CSharp
-        m_MethodName: ThrowProjectile
+        m_MethodName: PlayAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

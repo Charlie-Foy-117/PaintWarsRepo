@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     //calls Healthbarslider script
     public HealthBarSlider healthBar;
     PlayerHealthPotTotal totalHealthPots;
-    private int usedHealthPot = -1;
+    private int usedHealthPot = 1;
 
     public float hitInvincibilityMaxTime = 1;
     private float lastHitTime = 0;

@@ -14,6 +14,11 @@ public class PlayerBombThrow : MonoBehaviour
     private void Awake()
     {
         animate = GetComponent<Animator>();
+        
+    }
+    public void PlayAnimation()
+    {
+        StartCoroutine(ExecuteAfterTime((float)0.7));
     }
     public void ThrowProjectile()
     {
@@ -54,9 +59,14 @@ public class PlayerBombThrow : MonoBehaviour
         projectileRigidbody.velocity = projectileVelocity * direction;
     }
 
-    /*void Update()
+    IEnumerator ExecuteAfterTime(float time)
     {
-        //sets float to 0 to run bomb throw animation
+        animate.SetFloat("throw", 1);
+        yield return new WaitForSeconds(time);
+
+        ThrowProjectile();
+        yield return new WaitForSeconds(time);
         animate.SetFloat("throw", 0);
-    }*/
+    }
+
 }
