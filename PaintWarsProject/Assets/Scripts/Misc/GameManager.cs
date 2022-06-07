@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     GameObject[] levers;
 
     [SerializeField]
-    GameObject Stonedoor;
+    GameObject[] Stonedoor;
 
     [SerializeField]
-    GameObject Woodendoor;
+    GameObject[] Woodendoor;
 
     public int noOfLeversFlipped = 0;
 
@@ -37,13 +37,19 @@ public class GameManager : MonoBehaviour
 
     public void GetDoorState()
     {
-        if (Stonedoor && noOfLeversFlipped >= Stonedoor.GetComponent<DoorState>().reqLevers)
+        for (int i = 0; i < Stonedoor.Length; i++)
         {
-            Stonedoor.GetComponent<DoorState>().OpenDoor();
+            if (Stonedoor[i] && noOfLeversFlipped >= Stonedoor[i].GetComponent<DoorState>().reqLevers)
+            {
+                Stonedoor[i].GetComponent<DoorState>().OpenDoor();
+            }
         }
-        if (Woodendoor && noOfLeversFlipped >= Woodendoor.GetComponent<DoorState>().reqLevers)
-        {
-            Woodendoor.GetComponent<DoorState>().OpenDoor();
+        for (int i = 0; i < Woodendoor.Length; i++)
+        { 
+            if (Woodendoor[i] && noOfLeversFlipped >= Woodendoor[i].GetComponent<DoorState>().reqLevers)
+            {
+                Woodendoor[i].GetComponent<DoorState>().OpenDoor();
+            }
         }
     }
     private void Update()

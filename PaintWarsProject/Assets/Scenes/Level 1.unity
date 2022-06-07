@@ -847,9 +847,10 @@ MonoBehaviour:
   - {fileID: 1980361525}
   - {fileID: 1287997021}
   - {fileID: 63972064}
-  Stonedoor: {fileID: 573714503}
-  Woodendoor: {fileID: 1067300844}
-  reqLevers: 0
+  Stonedoor:
+  - {fileID: 0}
+  Woodendoor:
+  - {fileID: 0}
   noOfLeversFlipped: 0
 --- !u!4 &119399108
 Transform:
@@ -3050,7 +3051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8908691280141369548, guid: 9038ce372a1914a42a01fe61d2cab510, type: 3}
       propertyPath: m_Name
-      value: cf_enemychar_asset_1 1 (1)
+      value: cf_enemychar_asset_1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8908691280141369556, guid: 9038ce372a1914a42a01fe61d2cab510, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -9045,7 +9046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8908691280141369548, guid: 9038ce372a1914a42a01fe61d2cab510, type: 3}
       propertyPath: m_Name
-      value: cf_enemychar_asset_1 1 (2)
+      value: cf_enemychar_asset_1 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8908691280141369556, guid: 9038ce372a1914a42a01fe61d2cab510, type: 3}
       propertyPath: patrolPoints.Array.size
@@ -13307,25 +13308,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6136484326641565617, guid: 01109226d4a7538448cebe706a559f28, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.31973198
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136484326641565617, guid: 01109226d4a7538448cebe706a559f28, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.94750804
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136484326753513417, guid: 01109226d4a7538448cebe706a559f28, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.037961382
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136484326753513417, guid: 01109226d4a7538448cebe706a559f28, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.9992792
-      objectReference: {fileID: 0}
     - target: {fileID: 6136484327905018819, guid: 01109226d4a7538448cebe706a559f28, type: 3}
       propertyPath: m_Name
-      value: cf_mainchar-PBgun_asset_1 1
+      value: cf_mainchar-PBgun_asset_1
       objectReference: {fileID: 0}
     - target: {fileID: 6136484327905018820, guid: 01109226d4a7538448cebe706a559f28, type: 3}
       propertyPath: m_RootOrder
@@ -13375,14 +13360,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1095615021}
-    - target: {fileID: 6136484328079629020, guid: 01109226d4a7538448cebe706a559f28, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.04406121
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136484328079629020, guid: 01109226d4a7538448cebe706a559f28, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.9990288
-      objectReference: {fileID: 0}
     - target: {fileID: 7733149524965376715, guid: 01109226d4a7538448cebe706a559f28, type: 3}
       propertyPath: healthPotDisplay
       value: 
@@ -13568,7 +13545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8908691280141369548, guid: 9038ce372a1914a42a01fe61d2cab510, type: 3}
       propertyPath: m_Name
-      value: cf_enemychar_asset_1 1
+      value: 'cf_enemychar_asset_1 '
       objectReference: {fileID: 0}
     - target: {fileID: 8908691280141369556, guid: 9038ce372a1914a42a01fe61d2cab510, type: 3}
       propertyPath: patrolPoints.Array.data[0].y

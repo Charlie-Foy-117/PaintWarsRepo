@@ -11,7 +11,8 @@ public class DoorState : MonoBehaviour
 
     int stateOfDoor = 1;
     public int reqLevers = 0;
-
+    private bool WoodenCollider = false;
+    private bool StoneCollider = false;
     private void Start()
     {
         //initialise the animator
@@ -23,7 +24,17 @@ public class DoorState : MonoBehaviour
             ClosedDoor();
         }
 
+        if (DoorType.tag == "StonedoorReverse")
+        {
+            ClosedDoor();
+        }
+
         if (DoorType.tag == "Woodendoor")
+        {
+            ClosedDoor();
+        }
+
+        if (DoorType.tag == "WoodendoorReverse")
         {
             ClosedDoor();
         }
@@ -37,10 +48,21 @@ public class DoorState : MonoBehaviour
             animate.SetFloat("DoorState", 1);
             stateOfDoor = 1;
         }
+        if (DoorType.tag == "StonedoorReverse")
+        {
+            animate.SetFloat("DoorState", 1);
+            stateOfDoor = 1;
+
+        }
         if (DoorType.tag == "Woodendoor")
         {
             animate.SetFloat("DoorState", 1);
             stateOfDoor = 1;
+        }
+        if (DoorType.tag == "WoodendoorReverse")
+        {
+            animate.SetFloat("DoorState", 2);
+            stateOfDoor = 2;            
         }
     }
 
@@ -55,11 +77,31 @@ public class DoorState : MonoBehaviour
             stateOfDoor = 2;
             Destroy(gameObject.GetComponent<EdgeCollider2D>());
         }
+        if (DoorType.tag == "StonedoorReverse")
+        {
+            animate.SetFloat("DoorState", 2);
+            stateOfDoor = 2;
+            if (StoneCollider == false)
+            {
+                gameObject.AddComponent<BoxCollider2D>();
+                StoneCollider = true;
+            }
+        }
         if (DoorType.tag == "Woodendoor")
         {
             animate.SetFloat("DoorState", 2);
             stateOfDoor = 2;
             Destroy(gameObject.GetComponent<EdgeCollider2D>());
+        }
+        if (DoorType.tag == "WoodendoorReverse")
+        {
+            animate.SetFloat("DoorState", 2);
+            stateOfDoor = 2;
+            if (WoodenCollider == false)
+            {
+                gameObject.AddComponent<BoxCollider2D>();
+                WoodenCollider = true;
+            }
         }
     }
 
@@ -75,11 +117,29 @@ public class DoorState : MonoBehaviour
             OpenDoor();
         }
 
+        if (state == 1 && DoorType.tag == "StonedoorReverse")
+        {
+            ClosedDoor();
+        }
+        if (state == 2 && DoorType.tag == "StonedoorReverse")
+        {
+            OpenDoor();
+        }
+
         if (state == 1 && DoorType.tag == "Woodendoor")
         {
             ClosedDoor();
         }
         if (state == 2 && DoorType.tag == "Woodendoor")
+        {
+            OpenDoor();
+        }
+
+        if (state == 1 && DoorType.tag == "WoodendoorReverse")
+        {
+            ClosedDoor();
+        }
+        if (state == 2 && DoorType.tag == "WoodendoorReverse")
         {
             OpenDoor();
         }
