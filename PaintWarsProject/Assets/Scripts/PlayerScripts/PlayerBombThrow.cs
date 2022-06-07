@@ -11,6 +11,9 @@ public class PlayerBombThrow : MonoBehaviour
     private int direction;
     private Animator animate;
 
+    public float coolDown = 2;
+    private float lastTimePressed = 0;
+
     private void Awake()
     {
         animate = GetComponent<Animator>();
@@ -61,12 +64,17 @@ public class PlayerBombThrow : MonoBehaviour
 
     IEnumerator ExecuteAfterTime(float time)
     {
-        animate.SetFloat("throw", 1);
-        yield return new WaitForSeconds(time);
+        if (Time.time >= lastTimePressed + coolDown)
+        {
+            animate.SetFloat("throw", 1);
+            yield return new WaitForSeconds(time);
 
-        ThrowProjectile();
-        yield return new WaitForSeconds(time);
-        animate.SetFloat("throw", 0);
+            ThrowProjectile();
+            yield return new WaitForSeconds(time);
+            animate.SetFloat("throw", 0);
+
+            lastTimePressed = Time.time;
+        }
     }
 
 }

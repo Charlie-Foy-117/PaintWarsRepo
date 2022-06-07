@@ -59,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth < 3 && PlayerHealthPotTotal.healthPotValue >= 1)
         {
             currentHealth++;
-            totalHealthPots.AddHealthPotValue(usedHealthPot);
+            totalHealthPots.AddHealthPotValue(toAdd: -usedHealthPot);
         }
         
     }

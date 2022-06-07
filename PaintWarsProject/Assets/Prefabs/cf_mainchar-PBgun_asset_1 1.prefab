@@ -738,6 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e5822a57497ac44ad0d8fb772bb63b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPotUsage: 0
   healthPotDisplay: {fileID: 0}
 --- !u!114 &6136484327905018844
 MonoBehaviour:
@@ -753,6 +754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2705493817285060268, guid: 99eb5cd5063455c4bb464eeaa3e50afd, type: 3}
   projectileVelocity: {x: 10, y: 0}
+  coolDown: 0.5
 --- !u!114 &1512751797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,6 +769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 9181441054585677489, guid: 1b337e207af5d4841bcfe79d5db0e4ef, type: 3}
   projectileVelocity: {x: 9, y: 0.2}
+  coolDown: 2
 --- !u!1 &6136484327916461713
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealthPotTotal : MonoBehaviour
 {
     public static int healthPotValue = 0;
+    public int healthPotUsage = 0;
     public Text healthPotDisplay;
 
     public void AddHealthPotValue(int toAdd)
@@ -15,6 +16,7 @@ public class PlayerHealthPotTotal : MonoBehaviour
         //displays current health pot total
         healthPotDisplay.text = healthPotValue.ToString();
     }
+
     // Start is called before the first frame update
     void Start()
     {
