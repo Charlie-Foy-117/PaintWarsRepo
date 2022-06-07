@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 21700114}
   m_Layer: 0
   m_Name: cf_stonefloor_asset_1 (3)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 37680976}
   m_Layer: 0
   m_Name: cf_stonefloor_asset_1 (7)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 409138378}
   m_Layer: 0
   m_Name: cf_stonefloor_asset_1 (6)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1251,7 +1251,7 @@ GameObject:
   - component: {fileID: 417537496}
   m_Layer: 0
   m_Name: cf_stonefloor_asset_1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1763,7 +1763,7 @@ GameObject:
   - component: {fileID: 534971569}
   m_Layer: 0
   m_Name: cf_stonefloor_asset_1 (5)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3360,7 +3360,7 @@ GameObject:
   - component: {fileID: 1079415266}
   m_Layer: 0
   m_Name: cf_stonefloor_asset_1 (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3647,7 +3647,7 @@ GameObject:
   - component: {fileID: 1163409639}
   m_Layer: 0
   m_Name: cf_stonefloor_asset_1 (4)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4164,7 +4164,7 @@ GameObject:
   - component: {fileID: 1301096298}
   m_Layer: 0
   m_Name: cf_stonefloor_asset_1 (2)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4280,7 +4280,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450564616}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9982398, w: 0.059306815}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9982423, w: 0.059264205}
   m_LocalPosition: {x: 0.43207693, y: -2.5461545, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5272,9 +5272,13 @@ GameObject:
   - component: {fileID: 1793150162}
   - component: {fileID: 1793150161}
   - component: {fileID: 1793150160}
+  - component: {fileID: 1793150168}
+  - component: {fileID: 1793150167}
+  - component: {fileID: 1793150166}
+  - component: {fileID: 1793150169}
   m_Layer: 0
   m_Name: cf_boss_asset_1
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5320,7 +5324,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -5382,8 +5386,8 @@ MonoBehaviour:
   - {fileID: 98320270}
   - {fileID: 568261869}
   m_Bounds:
-    m_Center: {x: 1.4952993, y: 0.7294483, z: 0}
-    m_Extent: {x: 7.730507, y: 9.240552, z: 0}
+    m_Center: {x: 1.4952941, y: 0.72951984, z: 0}
+    m_Extent: {x: 7.7305055, y: 9.24048, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -5447,7 +5451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793150159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.3552, y: -7.7157, z: 0}
+  m_LocalPosition: {x: 16.883, y: -8.94, z: 0}
   m_LocalScale: {x: 0.40358016, y: 0.40358016, z: 0.40358016}
   m_Children:
   - {fileID: 751804447}
@@ -5458,6 +5462,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1793150166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793150159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1340655223bce3b42ba612efae395e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceStrength: 1
+  stopDistance: 1
+  patrolPoints:
+  - {x: 17.47, y: -8.94}
+  - {x: -9.04, y: -8.94}
+--- !u!114 &1793150167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793150159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70529fbe4a95ef0439b1f9737cec28e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 20
+  hitInvincibilityMaxTime: 1
+  healthPotDrop: {fileID: 6174042235573787589, guid: 4e004873951ca0a46b8fcd9a35bd669a, type: 3}
+  bossDrop: {fileID: 4072881145020448161, guid: ddc881f2c1b354d48a4cf0bd1acdf6dd, type: 3}
+--- !u!114 &1793150168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793150159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8dfc8d09046f14690457fd39c9811e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDamage: 1
+--- !u!114 &1793150169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793150159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef516ea9d0c11e44dbb312f8d35f9fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1799593683
 GameObject:
   m_ObjectHideFlags: 0
@@ -5613,7 +5675,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863178681}
-  m_LocalRotation: {x: 0, y: 0, z: -0.95266753, w: 0.30401427}
+  m_LocalRotation: {x: 0, y: 0, z: -0.95266753, w: 0.3040141}
   m_LocalPosition: {x: 3.0212984, y: -4.1064105, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

@@ -13,6 +13,9 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     GameObject healthPotDrop;
 
+    [SerializeField]
+    GameObject bossDrop;
+
     private void Awake()
     {
         //initalising our current health to be equal to our starting health when the player spawns
@@ -23,7 +26,14 @@ public class EnemyHealth : MonoBehaviour
     {
         //destroy the object this script is connected to
         Destroy(gameObject);
-        Instantiate(healthPotDrop, transform.position, Quaternion.identity);
+        if (gameObject.CompareTag("Boss"))
+        {
+            Instantiate(bossDrop, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(healthPotDrop, transform.position, Quaternion.identity);
+        }
     }
 
     //change our current health by set amount

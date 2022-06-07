@@ -9,6 +9,8 @@ TagManager:
   - Woodendoor
   - StonedoorReverse
   - WoodendoorReverse
+  - Floor
+  - Boss
   layers:
   - Default
   - TransparentFX
