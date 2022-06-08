@@ -61,8 +61,8 @@ public class DoorState : MonoBehaviour
         }
         if (DoorType.tag == "WoodendoorReverse")
         {
-            animate.SetFloat("DoorState", 2);
-            stateOfDoor = 2;            
+            animate.SetFloat("DoorState", 1);
+            stateOfDoor = 1;            
         }
     }
 
@@ -108,11 +108,11 @@ public class DoorState : MonoBehaviour
     //fuction to set the state of the door
     public void SetDoorState(int state)
     {
-        if (state == 1 && DoorType.tag == "StoneDoor")
+        if (state == 1 && DoorType.tag == "Stonedoor")
         {
             ClosedDoor();
         }
-        if (state == 2 && DoorType.tag == "StoneDoor")
+        if (state == 2 && DoorType.tag == "Stonedoor")
         {
             OpenDoor();
         }

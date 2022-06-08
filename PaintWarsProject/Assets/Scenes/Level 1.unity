@@ -848,9 +848,9 @@ MonoBehaviour:
   - {fileID: 1287997021}
   - {fileID: 63972064}
   Stonedoor:
-  - {fileID: 0}
+  - {fileID: 573714503}
   Woodendoor:
-  - {fileID: 0}
+  - {fileID: 1067300844}
   noOfLeversFlipped: 0
 --- !u!4 &119399108
 Transform:
