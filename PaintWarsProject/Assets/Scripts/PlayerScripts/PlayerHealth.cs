@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -27,7 +28,10 @@ public class PlayerHealth : MonoBehaviour
     public void Kill()
     {
         //destroy the object this script is connected to
-        Destroy(gameObject);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+        totalHealthPots.AddHealthPotValue(0);
+        
     }
 
     //change our current health by set amount
