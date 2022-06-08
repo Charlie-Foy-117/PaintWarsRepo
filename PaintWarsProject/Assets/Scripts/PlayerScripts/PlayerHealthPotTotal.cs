@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class PlayerHealthPotTotal : MonoBehaviour
 {
     public static int healthPotValue = 0;
-    public int healthPotUsage = 0;
     public Text healthPotDisplay;
 
     public void AddHealthPotValue(int toAdd)

@@ -23,6 +23,8 @@ public class PlayerHealth : MonoBehaviour
 
         //sets healthbar slider value to starting health
         healthBar.SetMaxHealth(startingHealth);
+
+        totalHealthPots = gameObject.GetComponent<PlayerHealthPotTotal>();
     }
     //kill the player (for now delete gameobject)
     public void Kill()
