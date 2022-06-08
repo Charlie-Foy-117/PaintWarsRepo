@@ -7,15 +7,23 @@ public class PlayerJump : MonoBehaviour
     //public variable, visible in unity inspector
     public float jumpSpeed = 3.0f;
     public bool inAir = true;
+    Animator animate;
 
     private Rigidbody2D physicsBody = null;
+
+    public float interval = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        animate = GetComponent<Animator>();
         physicsBody = GetComponent<Rigidbody2D>();
     }
-
+    public void StartJump()
+    {
+        StartCoroutine(JumpAnimation(interval));
+    }
     // Update is called once per frame
     void Update()
     {
@@ -52,5 +60,13 @@ public class PlayerJump : MonoBehaviour
         {
             inAir = false;
         }
+    }
+
+    IEnumerator JumpAnimation(float time)
+    {
+        animate.SetFloat("jump", 1);
+        yield return new WaitForSeconds(time);
+        MoveUp();
+        animate.SetFloat("jump", 0);
     }
 }

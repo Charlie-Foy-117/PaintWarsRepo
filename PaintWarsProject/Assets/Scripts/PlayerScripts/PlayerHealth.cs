@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public HealthBarSlider healthBar;
     PlayerHealthPotTotal totalHealthPots;
     private int usedHealthPot = 1;
+    private int allHealthPots = 0;
 
     public float hitInvincibilityMaxTime = 1;
     private float lastHitTime = 0;
@@ -32,7 +33,8 @@ public class PlayerHealth : MonoBehaviour
         //destroy the object this script is connected to
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
-        totalHealthPots.AddHealthPotValue(0);
+        allHealthPots = PlayerHealthPotTotal.healthPotValue;
+        totalHealthPots.AddHealthPotValue(-allHealthPots);
         
     }
 

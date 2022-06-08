@@ -645,6 +645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSpeed: 8
   inAir: 0
+  interval: 0.25
 --- !u!114 &6136484327905018840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,7 +739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e5822a57497ac44ad0d8fb772bb63b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPotUsage: 0
   healthPotDisplay: {fileID: 0}
 --- !u!114 &6136484327905018844
 MonoBehaviour:

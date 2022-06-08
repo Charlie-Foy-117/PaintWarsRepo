@@ -846,7 +846,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1642424533}
         m_TargetAssemblyTypeName: PlayerJump, Assembly-CSharp
-        m_MethodName: MoveUp
+        m_MethodName: StartJump
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
