@@ -9,11 +9,14 @@ public class EnemyPatrol : MonoBehaviour
     public Vector2[] patrolPoints; // list of patrol point we will go between
     private int currentPoint = 0; // index of the current point we're moving towards
     private Rigidbody2D ourRigidbody; //the rigid body attached to this object
+    private Animator animate;
+    private bool facingRight = false;
 
     void Awake()
     {
         //get rigidbody we are using for movement
         ourRigidbody = GetComponent<Rigidbody2D>();
+        animate = GetComponent<Animator>();
     }
     
     // Update is called once per frame
@@ -44,5 +47,30 @@ public class EnemyPatrol : MonoBehaviour
 
         //move in the correct direciton with the set force strength
         ourRigidbody.AddForce(direction * forceStrength);
+
+        if (direction.x > 0)
+        {
+            if (!facingRight)
+            {
+                Flip();
+                facingRight = true;
+            }
+        }
+
+        if (direction.x < 0)
+        {
+            if(facingRight)
+            {
+                Flip();
+                facingRight = false;
+            }
+        }
+    }
+
+    void Flip()
+    { 
+        Vector2 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
     }
 }

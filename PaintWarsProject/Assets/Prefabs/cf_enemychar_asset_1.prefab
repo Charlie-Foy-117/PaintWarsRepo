@@ -1039,7 +1039,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceStrength: 1
-  stopDistance: 1
+  stopDistance: 2
   patrolPoints:
   - {x: 24.23, y: -2.521}
   - {x: 16.18, y: -2.521}
@@ -1077,3 +1077,4 @@ MonoBehaviour:
   startingHealth: 1
   hitInvincibilityMaxTime: 1
   healthPotDrop: {fileID: 6174042235573787589, guid: 4e004873951ca0a46b8fcd9a35bd669a, type: 3}
+  bossDrop: {fileID: 0}
