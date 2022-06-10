@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3074461028041713541}
   - component: {fileID: -1384814403001701688}
   - component: {fileID: 1605923948843584245}
+  - component: {fileID: -102190898685017813}
   m_Layer: 0
   m_Name: cf_map_asset_1
   m_TagString: Untagged
@@ -123,3 +124,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 91.99647, y: 59.069996}
   m_EdgeRadius: 0
+--- !u!50 &-102190898685017813
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4072881145020448161}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
