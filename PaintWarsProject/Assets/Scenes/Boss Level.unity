@@ -5462,6 +5462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cf_boss_asset_1
       objectReference: {fileID: 0}
+    - target: {fileID: 6164465216646564149, guid: 9539426cea77a7b46a0229b58109952f, type: 3}
+      propertyPath: enemyDamage
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6164465216646564152, guid: 9539426cea77a7b46a0229b58109952f, type: 3}
       propertyPath: m_RootOrder
       value: 2
