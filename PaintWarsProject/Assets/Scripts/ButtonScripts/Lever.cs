@@ -22,12 +22,15 @@ public class Lever : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //set the lever to on sprite
-        gameObject.GetComponent<SpriteRenderer>().sprite = leverOn.GetComponent<SpriteRenderer>().sprite;
+        if (collision.CompareTag("Player"))
+        {
+            //set the lever to on sprite
+            gameObject.GetComponent<SpriteRenderer>().sprite = leverOn.GetComponent<SpriteRenderer>().sprite;
 
-        //set the isOn to true when triggered
-        isOn = true;
+            //set the isOn to true when triggered
+            isOn = true;
 
-        Destroy(gameObject.GetComponent<BoxCollider2D>());
+            Destroy(gameObject.GetComponent<BoxCollider2D>());
+        }
     }
 }
