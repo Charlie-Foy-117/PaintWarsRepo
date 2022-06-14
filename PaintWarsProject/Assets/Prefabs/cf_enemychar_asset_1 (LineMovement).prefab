@@ -416,8 +416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b8c815fd2ce474d8c9e69e13ac4964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceStrength: 2
-  direction: {x: -2, y: 0}
+  forceStrength: 1
+  direction: {x: -1, y: 0}
 --- !u!1 &4832738898089415103
 GameObject:
   m_ObjectHideFlags: 0

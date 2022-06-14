@@ -11,6 +11,7 @@ TagManager:
   - WoodendoorReverse
   - Floor
   - Boss
+  - Crate
   layers:
   - Default
   - TransparentFX

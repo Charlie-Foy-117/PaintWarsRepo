@@ -6,9 +6,12 @@ public class OnCollisionDestroy : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider)
+        if (!collision.collider.CompareTag("Crate"))
         {
-            ProjectileCollision();
+            if (collision.collider)
+            {
+                ProjectileCollision();
+            }
         }
     }
     public void ProjectileCollision()

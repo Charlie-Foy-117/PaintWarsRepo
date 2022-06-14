@@ -11,6 +11,7 @@ public class EnemyPatrol : MonoBehaviour
     private Rigidbody2D ourRigidbody; //the rigid body attached to this object
     private Animator animate;
     private bool facingRight = false;
+   
 
     void Awake()
     {

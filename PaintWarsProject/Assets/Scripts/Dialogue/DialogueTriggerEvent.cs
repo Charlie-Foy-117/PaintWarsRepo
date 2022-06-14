@@ -9,8 +9,11 @@ public class DialogueTriggerEvent : MonoBehaviour
     //runs StartDialogue() when trigger is active and deletes trigger box to stop repetition
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartDialogue();
-        Destroy(this);
+        if (collision.CompareTag("Player"))
+        {
+            StartDialogue();
+            Destroy(this);
+        }
     }
 
     //looks for dialogue script and runs the code
