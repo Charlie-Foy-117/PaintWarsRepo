@@ -2033,7 +2033,7 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -16.075455, y: 0}
-  - {x: 24.56, y: 0}
+  - {x: 18.164267, y: 0.22841945}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
